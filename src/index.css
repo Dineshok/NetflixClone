@@ -5,9 +5,213 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.topContainer {
+  display: flex;
+  height: 100px;
+  align-items: center;
+}
+
+.moviesSection {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.moviesSection h1 {
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.moviesContainer {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+}
+
+.moviesContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.movieImages {
+  height: 200px;
+  width: auto;
+  margin-right: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transform-origin: center bottom;
+}
+
+.movieImages:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+.randomMovieContainer {
+  width: 100%;
+  height: 350px; /* Reduced height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.randomMovieContent {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.randomMovieText {
+  width: 55%;
+}
+
+.randomMovieTitle {
+  font-size: 32px; /* Slightly smaller */
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.randomMovieDescription {
+  font-size: 16px;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  max-height: 100px; /* Restrict description height */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limit to 3 lines */
+  -webkit-box-orient: vertical;
+}
+
+.watchNowButton {
+  background-color: red;
+  color: white;
+  padding: 10px 20px; /* Reduced padding */
+  border: none;
+  font-size: 16px; /* Smaller text */
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.watchNowButton:hover {
+  background-color: darkred;
+}
+
+/* Right Side - Movie Poster */
+.randomMoviePosterContainer {
+  width: 35%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.randomMoviePoster {
+  width: 100%;
+  height: 100%;
+  max-height: 320px; /* Reduced poster height */
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+
+.trailerOverlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.closeButton {
+  background: red;
+  color: white;
+  border: none;
+  font-size: 18px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+.closeButton:hover {
+  background: darkred;
+}
+
+
+
+
+
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  margin-right: 20px;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Adding a transition for when active class is applied */
+.active {
+  font-weight: bold;
+  color: white;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background-color: red; /* Red underline */
+  border-radius: 2px;
+  transition: width 0.3s ease; /* Smooth width transition */
+}
+
+/* This will make sure the underline grows smoothly when active */
+a:not(.active)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%; /* Initial width when inactive */
+  height: 3px;
+  background-color: red; /* Red underline */
+  border-radius: 2px;
+  transition: width 0.3s ease; /* Smooth width transition */
+}
+
+
+
+
