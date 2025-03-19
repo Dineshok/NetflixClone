@@ -17,7 +17,7 @@ A Netflix-inspired movie app built with React, showcasing trending, top-rated, u
 
 ## API Key
 
-The app uses [The Movie Database (TMDb)](https://www.themoviedb.org/) API. To get it working:
+The app uses [The Movie Database (TMDb)](https://www.themoviedb.org/) API.
 
 ## Demo
 
